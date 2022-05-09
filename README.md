@@ -24,11 +24,11 @@ Com essa imagem, para atualizar o conteúdo das páginas `HTML`, é preciso reco
 
 `sudo docker container rm my-caddy-server`
 
-E fazer o `build` novamente.
+E executar a imagem novamente, com `docker container run`.
 
 ## Parte 2 - Potencializando nosso Servidor para desenvolvimento
 
-No Docker Hub do `CADDY`, na seção *Basic Usage*, é apresentada a possibilidade de se ligar arquivos ou pastas usados na imagem com o diretório atual. Dessa forma, alterações feitas nesse diretório serão atualizadas na imagem diretamente, sem que seja preciso construir uma nova imagem. Isso é feito pela flag `-v`:
+No Docker Hub do `CADDY`, na seção *Basic Usage*, é apresentada a possibilidade de se ligar arquivos ou pastas usados na imagem com o diretório atual. Dessa forma, alterações feitas nesse diretório serão atualizadas na imagem diretamente, sem que seja preciso construir uma nova imagem. Isso é feito pela flag `-v` no comando `docker container run`:
 
 `sudo docker container run --name my-caddy-server -p 8080:80 -v $PWD/pages:/usr/src/pages -d custom-caddy:2.5.1-alpine`
 
