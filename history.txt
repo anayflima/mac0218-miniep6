@@ -1,0 +1,33 @@
+## Parte 1 - Criando sua própria imagem
+
+# construção da imagem
+sudo docker image build . -t custom-caddy:2.5.1-alpine
+
+# execução da imagem
+sudo docker container run --name my-caddy-server -p 8080:80 -d custom-caddy:2.5.1-alpine
+
+# testagem da atualização do HTML
+
+# interrupção da execução da imagem
+sudo docker container stop my-caddy-server
+
+# remoção da imagem
+sudo docker container rm my-caddy-server
+
+# execução da imagem novamente, para ver as atualizações
+sudo docker container run --name my-caddy-server -p 8080:80 -d custom-caddy:2.5.1-alpine
+
+## Parte 2 - Potencializando nosso Servidor para desenvolvimento
+
+# ligamento da pasta pages do diretório atual com a da imagem
+sudo docker container run --name my-caddy-server -p 8080:80 -v $PWD/pages:/usr/src/pages -d custom-caddy:2.5.1-alpine
+
+# testagem da atualização do HTML
+
+# interrupção da execução da imagem
+sudo docker container stop my-caddy-server
+
+# remoção da imagem
+sudo docker container rm my-caddy-server
+
+# Mais detalhes sobre a testagem da atualização do HTML e explicação de algumas escolhas são apresentadas no arquivo README.md desse projeto.
