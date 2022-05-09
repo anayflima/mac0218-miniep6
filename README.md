@@ -1,6 +1,10 @@
 # Miniep6 - MAC0218
-MiniEP6 da matéria MAC0218 - Técnicas de Programação II.
-Aplicação do docker.
+MiniEP6 da matéria MAC0218 - Técnicas de Programação II. Aplicação do docker.
+
+## Autoria
+
+**Nome:** Ana Yoon Faria de Lima
+**NUSP:** 11795279
 
 ## Parte 1 - Criando sua própria imagem
 
