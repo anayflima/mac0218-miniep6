@@ -1,4 +1,4 @@
-# Miniep6 - MAC0218
+# MiniEP6 - MAC0218
 MiniEP6 da matéria MAC0218 - Técnicas de Programação II.   
 Aplicação do docker.
 
